@@ -2,13 +2,14 @@ spring:
   application:
     name: digital-wallet
   datasource:
-    url: jdbc:mysql://localhost:3306/digitalwallet
-    username: mariam
-    password: mariam@123
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/digitalwallet?allowPublicKeyRetrieval=true&useSSL=false
+    username: ${MYSQL_USER:mariam}
+    password: ${MYSQL_PASSWORD:mariam@123}
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     properties:
       hibernate:
         format_sql: true
         show_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
