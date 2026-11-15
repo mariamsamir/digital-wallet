@@ -45,9 +45,6 @@ class PayTechBankTest {
                         20250615156,50#2025061590845461
                         234sdf,50#202506159000001#note/debt payment march/internal_reference/A462JE81
                         """;
-       assertThrows(InvalidTransactionException.class, () -> {
-            transactionParser.parse(transactions);
-        });
         assertThrows(InvalidTransactionException.class, () -> transactionParser.parse(transactions));
 
     }
