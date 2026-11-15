@@ -2,7 +2,8 @@ package com.banking.payment.receive;
 
 
 import com.banking.payment.receive.database.BankTransactionRepository;
-import com.banking.payment.receive.transaction.Transaction;
+import com.banking.payment.receive.domain.Transaction;
+import com.banking.payment.receive.service.ReceiveTransactionService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

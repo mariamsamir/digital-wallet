@@ -1,6 +1,7 @@
-package com.banking.payment.receive.transaction;
+package com.banking.payment.receive.service.transaction;
 
-import com.banking.payment.receive.InvalidTransactionException;
+import com.banking.payment.receive.domain.Transaction;
+import com.banking.payment.receive.controller.InvalidTransactionException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
@@ -26,7 +27,6 @@ public class AcmeBank implements TransactionParser {
 
             Double amount = Double.valueOf(dataList[0].replace(",","."));
             String reference = dataList[1];
-//            LocalDateTime date = LocalDateTime.parse(dataList[2]);
 
             return Transaction.builder()
                     .reference(reference)

@@ -1,4 +1,4 @@
-package com.banking.payment.receive.transaction;
+package com.banking.payment.receive.service.transaction;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;

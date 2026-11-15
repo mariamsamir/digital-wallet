@@ -1,11 +1,10 @@
-package com.banking.payment.receive;
+package com.banking.payment.receive.service;
 
 import com.banking.payment.receive.database.BankTransactionEntity;
 import com.banking.payment.receive.database.BankTransactionRepository;
-import com.banking.payment.receive.transaction.Transaction;
+import com.banking.payment.receive.domain.Transaction;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 @Service

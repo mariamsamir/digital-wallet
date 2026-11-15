@@ -1,12 +1,11 @@
-package com.banking.payment.send;
+package com.banking.payment.send.controller;
 
-import com.banking.payment.send.domain.ReceiverInfo;
-import com.banking.payment.send.domain.SenderInfo;
-import com.banking.payment.send.domain.TransferInfo;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonRootName;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import tools.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
@@ -16,6 +15,8 @@ import java.util.List;
 @Builder
 @JsonRootName("PaymentRequestMessage")
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
+@NoArgsConstructor
+@AllArgsConstructor
 public class SendPaymentResponseMessage {
 
     @JacksonXmlElementWrapper(localName = "TransferInfo")

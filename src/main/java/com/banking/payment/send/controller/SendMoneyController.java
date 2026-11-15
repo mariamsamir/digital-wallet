@@ -1,6 +1,5 @@
-package com.banking.payment.send;
+package com.banking.payment.send.controller;
 
-import com.banking.payment.send.domain.SendPaymentRequestMessage;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

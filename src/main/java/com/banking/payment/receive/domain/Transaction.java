@@ -1,4 +1,4 @@
-package com.banking.payment.receive.transaction;
+package com.banking.payment.receive.domain;
 
 import com.banking.payment.receive.database.BankTransactionEntity;
 import lombok.AllArgsConstructor;

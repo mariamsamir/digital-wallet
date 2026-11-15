@@ -1,6 +1,7 @@
-package com.banking.payment.receive.transaction;
+package com.banking.payment.receive.service.transaction;
 
-import com.banking.payment.receive.InvalidTransactionException;
+import com.banking.payment.receive.domain.Transaction;
+import com.banking.payment.receive.controller.InvalidTransactionException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
@@ -24,8 +25,6 @@ public class PayTechBank implements TransactionParser {
     private Transaction buildTransaction(String data) {
         try {
             String[] dataList = data.split("[,#]+");
-
-//            Date date = Date.valueOf(dataList[0]);
             Double amount = Double.valueOf(dataList[1]);
             String reference = dataList[2];
             Map<String, String> notes = new HashMap<>();

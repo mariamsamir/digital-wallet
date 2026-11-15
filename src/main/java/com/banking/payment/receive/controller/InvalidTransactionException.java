@@ -1,4 +1,4 @@
-package com.banking.payment.receive;
+package com.banking.payment.receive.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
